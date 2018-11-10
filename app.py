@@ -70,17 +70,18 @@ def time_post():
           print(request.form['text'].split())
           
           for item in request.form['text'].split():
+	    answer = "who knows?"
             if item == 'Brisbane':
                answer = (datetime.datetime.now(pytz.timezone("Australia/Brisbane")).strftime('Time = ' + '%H:%M:%S' + ' Brisbane ' + ' Year = ' + '%d-%m-%Y'))
-            elseif:
-               answer = (datetime.datetime.now(pytz.timezone("Europe/London")).strftime('Time = ' + '%H:%M:%S' + ' GMT ' + ' Year = ' + '%d-%m-%Y'))
+            #else:
+               #answer = (datetime.datetime.now(pytz.timezone("Europe/London")).strftime('Time = ' + '%H:%M:%S' + ' GMT ' + ' Year = ' + '%d-%m-%Y'))
 
 	    #answer = datetime.datetime.now().strftime('Time == ' + '%H:%M:%S' + ' Year == ' + '%d-%m-%Y')
             #answer = datetime.datetime.now().strftime('%Y-%m-%d \n %H:%M:%S')
 
               
               
-            return render_template('time.html', result=answer)
+          return render_template('time.html', result=answer)
 
          
 
